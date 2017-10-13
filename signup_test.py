@@ -37,7 +37,17 @@ class Test(unittest.TestCase):
 		self.assertEqual(len(Credential.login_credentials),2)
 
 #delete credential if someone doesn't need the account 
-	def 
+	def test_delete_credential(self):
+
+		self.new_credential.save_credential()
+
+		another_credential=Credential("James","Gitau","jamesgitau@gmail.com","Well, This are my notes and hope they work")
+		another_credential.save_credential()
+
+		self.new_credential.delete_credential()
+
+		self.assertEqual(len(Credential.login_credentials),1)
+
 
 if __name__=="__main__":
 	unittest.main(verbosity=2) 
