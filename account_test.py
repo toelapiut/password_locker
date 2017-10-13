@@ -15,9 +15,9 @@ class Tests(unittest.TestCase):
 
 
 #display account list
-	def test_dispaly_accounts(self):
-		self.assertEqual(Account.display.accounts(),Account.accounts)
-		
+	def test_dispaly_account(self):
+		self.assertEqual(Account.display_accounts(),Account.accounts_list)
+
 
 if __name__ == "__main__":
 	unittest.main()
