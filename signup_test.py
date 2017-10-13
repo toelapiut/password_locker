@@ -60,6 +60,18 @@ class Test(unittest.TestCase):
 
 		self.assertEqual(account_found.email,another_credential.email)
 
+#account exists function
+	def test_account_exists(self):
+
+		self.new_credential.save_credential()
+		another_credential=Credential("James","Gitau","QWERTY","jamesgitau@gmail.com","Well, This are my notes and hope they work")
+		
+		another_credential.save_credential()
+
+		exist_account=Credential.account_exist("jamesgitau@gmail.com")
+
+		self.assertTrue(exist_account)
+
 
 
 
