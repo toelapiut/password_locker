@@ -14,6 +14,15 @@ class Tests(unittest.TestCase):
 		self.assertEqual(self.new_account.passwords,"qwertyui")
 
 
+
+
+	def test_save_multiple_accounts(self):
+		self.new_account.save_accounts()
+
+		test_account=Account("james6@gmail.com","qwe123")
+		test_account.save_accounts()
+		self.assertEqual(len(Account.accounts_list),2)
+		
 #display account list
 	def test_dispaly_account(self):
 		self.assertEqual(Account.display_accounts(),Account.accounts_list)
