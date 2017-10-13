@@ -58,6 +58,8 @@ class Test(unittest.TestCase):
 
 		account_found=Credential.find_account("QWERTY")
 
+		self.assertEqual(Credential.login_credentials.email,another_credential.email)
+
 
 
 

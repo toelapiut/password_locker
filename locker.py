@@ -18,5 +18,17 @@ class Credential:
 
 		Credential.login_credentials.append(self)
 
+#delete account function
 	def delete_credential(self):
 		Credential.login_credentials.remove(self)
+
+
+#Decorator
+#find account function
+
+	@classmethod
+	def find_account(cls,password):
+
+		for passed in cls.login_credentials:
+			if passed == password:
+				return passed
