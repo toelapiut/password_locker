@@ -13,10 +13,10 @@ class Test(unittest.TestCase):
 		self.assertEqual(self.new_credential.email,"toelapiut7@gmail.com")
 		self.assertEqual(self.new_credential.note,"Hello, This are my notes and hope they work")
 
-	# def test_save_credential(self):
-	# 	self.new_credential.save_credential()
+	def test_save_credential(self):
+		self.new_credential.save_credential()
 
-	# 	self.assertEqual(len(Credential.login_credentials),1)
+		self.assertEqual(len(Credential.login_credentials),1)
 
 
 
