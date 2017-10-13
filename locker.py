@@ -8,3 +8,11 @@ class Credential:
 		self.last_name=last_name
 		self.email=email
 		self.note=note
+
+
+#Methods to describe the functionality 
+
+# save credential function
+	def save_credential(self):
+
+		Credential.login_credentials.append(self)
