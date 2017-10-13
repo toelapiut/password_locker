@@ -2,7 +2,7 @@ class Credential:
 
 	login_credentials=[]
 
-	def __init__(self,first_name,password,last_name,email,note):
+	def __init__(self,first_name,last_name,password,email,note):
 
 		self.first_name=first_name
 		self.last_name=last_name
@@ -27,8 +27,8 @@ class Credential:
 #find account function
 
 	@classmethod
-	def find_account(cls,password):
+	def find_account(cls,passwrd):
 
 		for passed in cls.login_credentials:
-			if passed == password:
+			if passed.password == passwrd:
 				return passed
