@@ -49,12 +49,14 @@ class Test(unittest.TestCase):
 
 		self.assertEqual(len(Credential.login_credentials),1)
 
-#access the com
-	def find_account(self):
+#access the account by password
+	def find_account_by_password(self):
 		self.new_credential.save_credential()
 
 		another_credential=Credential("James","Gitau","QWERTY","jamesgitau@gmail.com","Well, This are my notes and hope they work")
 		another_credential.save_credential()
+
+		account_found=Credential.find_account("QWERTY")
 
 
 
