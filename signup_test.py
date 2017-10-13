@@ -7,7 +7,7 @@ class Test(unittest.TestCase):
 #creating a set up test 
 	def setUp(self):
 
-		self.new_credential=Credential("apiut","toel","QwertY","toelapiut7@gmail.com","Hello, This are my notes and hope they work")
+		self.new_credential=Credential("apiut","toel","QwertY","toelapiut7@gmail.com")
 
 #creation of an initializing test 
 	def test_init(self):
@@ -15,7 +15,6 @@ class Test(unittest.TestCase):
 		self.assertEqual(self.new_credential.last_name,"toel")
 		self.assertEqual(self.new_credential.password,"QwertY")
 		self.assertEqual(self.new_credential.email,"toelapiut7@gmail.com")
-		self.assertEqual(self.new_credential.note,"Hello, This are my notes and hope they work")
 
 #testing if my credentials are being saved
 	def test_save_credential(self):
@@ -32,7 +31,7 @@ class Test(unittest.TestCase):
 
 		self.new_credential.save_credential()
 
-		another_credential=Credential("James","Gitau","QWERTY","jamesgitau@gmail.com","Well, This are my notes and hope they work")
+		another_credential=Credential("James","Gitau","QWERTY","jamesgitau@gmail.com")
 		another_credential.save_credential()
 
 		self.assertEqual(len(Credential.login_credentials),2)
@@ -42,7 +41,7 @@ class Test(unittest.TestCase):
 
 		self.new_credential.save_credential()
 
-		another_credential=Credential("James","Gitau","QWERTY","jamesgitau@gmail.com","Well, This are my notes and hope they work")
+		another_credential=Credential("James","Gitau","QWERTY","jamesgitau@gmail.com")
 		another_credential.save_credential()
 
 		self.new_credential.delete_credential()
@@ -53,7 +52,7 @@ class Test(unittest.TestCase):
 	def find_account_by_password(self):
 		self.new_credential.save_credential()
 
-		another_credential=Credential("James","Gitau","QWERTY","jamesgitau@gmail.com","Well, This are my notes and hope they work")
+		another_credential=Credential("James","Gitau","QWERTY","jamesgitau@gmail.com")
 		another_credential.save_credential()
 
 		account_found=Credential.find_account("QWERTY")
@@ -64,7 +63,7 @@ class Test(unittest.TestCase):
 	def test_account_exists(self):
 
 		self.new_credential.save_credential()
-		another_credential=Credential("James","Gitau","QWERTY","jamesgitau@gmail.com","Well, This are my notes and hope they work")
+		another_credential=Credential("James","Gitau","QWERTY","jamesgitau@gmail.com")
 		
 		another_credential.save_credential()
 
