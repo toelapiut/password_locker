@@ -32,3 +32,14 @@ class Credential:
 		for passed in cls.login_credentials:
 			if passed.password == passwrd:
 				return passed
+
+
+
+
+
+	@classmethod
+	def account_exist(cls,email):
+		for femail in cls.login_credentials:
+			if femail.email==email:
+				return True
+		return False
