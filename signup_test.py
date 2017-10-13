@@ -22,6 +22,18 @@ class Test(unittest.TestCase):
 
 		self.assertEqual(len(Credential.login_credentials),1)
 
+#tearing Down function to clear class variable
+	def tearDown(self):
+		login_credentials=[]
+
+#saving multiple credentials 
+	def save_multiple_credentials(self):
+
+		self.new_credential.save_credential()
+
+		another_credential=Credential("apiut","toel","toelapiut7@gmail.com","Hello, This are my notes and hope they work")
+		another_credential.save_credential()
+		self.assertEqual(len(Credential.login_credentials),1)
 
 
 if __name__=="__main__":
