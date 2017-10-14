@@ -1,4 +1,6 @@
+#!/usr/bin/env python3.6
 import random
+
 def function():
 	print(" __      __   _________    __           __            __________    ")
 	print("|  |    |  | |         |  |  |         |  |          /           \ ")
