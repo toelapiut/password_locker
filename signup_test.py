@@ -96,17 +96,17 @@ class Tested(unittest.TestCase):
 
 		self.assertEqual(len(Account.accounts_list),2)
 
-# #delete credential if someone doesn't need the account 
-# 	def test_delete_credential(self):
+#delete credential if someone doesn't need the account 
+	def test_delete_account(self):
 
-# 		self.new_credential.save_credential()
+		self.new_acc.save_account()
 
-# 		another_credential=Credential("James","Gitau","QWERTY","jamesgitau@gmail.com")
-# 		another_credential.save_credential()
+		another_account=Account("Twitter","toelapiut7@gmail.com","QWERTY")
+		another_account.save_account()
 
-# 		self.new_credential.delete_credential()
+		self.new_acc.delete_account()
 
-# 		self.assertEqual(len(Credential.login_credentials),1)
+		self.assertEqual(len(Account.accounts_list),1)
 
 # #access the account by password
 # 	def find_account_by_password(self):
