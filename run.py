@@ -220,28 +220,35 @@ def main():
 				if  account_existed(user_acc_name): 
 					search_account=find_existing_account(user_acc_name)
 					delete_accounts(search_account)
+					print("\n")
 
+				else:
+					print("Account doesnt exist")
 #----------------------------------------------------------------------
 
 
 #find the contact and display it 	
 			elif usercode=="fa":
+			    print("Enter -Account Name-")
 			    user_acc_name=input()
+			    print("\n")
 
-		
+			    if  account_existed(user_acc_name): 
+				    search_for_account=find_existing_account(user_acc_name)
+				    print(f"Account Name:{search_for_account.account_name} \n Email:{search_for_account.emails} \n Password:{search_for_account.passwords} \n =================================================")
+					#---------------------------------------------------------------------
 #Exiting from the program				
 			elif usercode=="ex":
 				print("Bye....Come Again!")
-				break
-			else:
-				print("Try the code Please or 'ex'")
-			
+				break			
 
-
+#-----------------------------------------------------------------------
 	else:
-		print()
+		print("Please try again")
 
 
-
+#====================================================================
+								#END
+#=======================================================================
 if __name__=='__main__':
 	main()
