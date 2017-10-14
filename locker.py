@@ -73,7 +73,7 @@ class Account:
 			g_password.append(passx)
 		g_password.append(passx)
 		x=''.join(g_password)
-		account_info=x
+		return x
 	generate_password()
 #--------------------------------------------------------
 

@@ -83,8 +83,16 @@ def account_existed(emails):
 
 #---------------------------------------------------------
 
+#Function to display all your accounts
 def display_account():
 	return Account.display_accounts()
+
+#---------------------------------------------------------
+
+#function to generate a new password
+def random_password():
+	return Account.generate_password()
+
 
 
 #=========================================================
@@ -156,7 +164,29 @@ def main():
 			usercode= input().strip().lower()
 
 			if usercode=='ca':
-				print("hello")
+
+				print("Enter Account Name")
+				aname=input()
+				print("\n")
+				
+				print("Enter email")
+				print("-"*22)
+				emails=input()
+				print("\n")
+
+				print("Do you want to create your own password?Y/N")
+
+				choice=input().strip().lower()
+
+				
+				if choice=="n":
+					psword=random_password()
+					print(random_password())
+				elif choice=="y":
+					print("Enter Password")
+					print("-"*22)
+					psword=input()
+
 			else:
 				print('fuck u')
 
