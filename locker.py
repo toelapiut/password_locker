@@ -61,7 +61,7 @@ class Account:
 
 
 #------------------------------------------------------------------
-##password generatoe
+##password generator
 	def generate_password():
 		g_password=[]	
 		randspasslength=random.randint(10,15)
@@ -112,9 +112,9 @@ class Account:
 #-------------------------------------------------------
 #check for existance
 	@classmethod
-	def account_exists(cls,email):
+	def account_exists(cls,aname):
 		for femail in cls.accounts_list:
-			if femail.emails==email:
+			if femail.account_name==aname:
 				return True
 		return False
 #------------------------------------------------------

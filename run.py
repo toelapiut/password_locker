@@ -61,7 +61,7 @@ from locker import Account
 
 #function to delete unwanted account
 def delete_accounts(account):
-	accounts.delete_account()
+	account.delete_account()
 
 #---------------------------------------------------------
 
@@ -79,14 +79,14 @@ def save_user_account(ac):
 #---------------------------------------------------------
 
 #function to find accounts
-def find_existing_account(passwrd):
-	return Account.find_accounts(passwrd)
+def find_existing_account(a_name):
+	return Account.find_accounts(a_name)
 
 #--------------------------------------------------------
 
 #function to find existing accounts
-def account_existed(emails):
-	return Account.account_exists(emails)
+def account_existed(a_name):
+	return Account.account_exists(a_name)
 
 #---------------------------------------------------------
 
@@ -195,15 +195,27 @@ def main():
 					print("-"*22)
 					pword=input()
 				save_user_account(create_account1(aname,emails,pword))
+#----------------------------------------------------------------------
 
-
+#displaying all the users information
 			elif usercode=="da":
 				if display_account():
 
 					for accs in display_account():
 						print(f" Account Name:{accs.account_name} \n Email: {accs.emails} \n password: {accs.passwords} \n ======================")
 
+#----------------------------------------------------------------------
+
+#deleting a specific contact
 			elif usercode=="del":
+				print("-"*10)
+				print("Enter Account Name")
+				user_acc_name=input()
+				print("\n")
+
+				if  account_existed(user_acc_name): 
+					search_account=find_existing_account(user_acc_name)
+					delete_accounts(search_account)
 				
 			elif usercode=="ex":
 				print("Bye....Come Again!")
