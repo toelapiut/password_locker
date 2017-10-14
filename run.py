@@ -69,7 +69,7 @@ def delete_accounts(account):
 def create_account1(aname,emails,pword):
 	new_account=Account(aname,emails,pword)
 	return new_account
-	
+
 #---------------------------------------------------------
 
 #function save account 
@@ -164,8 +164,8 @@ def main():
 
 
 	if account_existx(user_password):
-		# while True:
-			print("Well, Use the following codes : ca - create a new Account, da - display contacts, fa -find a contact, ex -exit the contact list ")
+		while True:
+			print("Well, Use the following codes : ca - create a new account, da - display contacts, fa -find a account, ex -exit the contact list, del-del account")
 
 			print("Enter code")
 			usercode= input().strip().lower()
@@ -195,6 +195,19 @@ def main():
 					print("-"*22)
 					pword=input()
 				save_user_account(create_account1(aname,emails,pword))
+
+
+			elif usercode=="da":
+				if display_account():
+
+					for accs in display_account():
+						print(f" Account Name:{accs.account_name} \n Email: {accs.emails} \n password: {accs.passwords} \n ======================")
+
+			elif usercode=="del":
+				
+			elif usercode=="ex":
+				print("Bye....Come Again!")
+				break
 			else:
 				print('fuck u')
 			
