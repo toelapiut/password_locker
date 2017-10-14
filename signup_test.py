@@ -82,19 +82,19 @@ class Tested(unittest.TestCase):
 
 		self.assertEqual(len(Account.accounts_list),1)
 
-# #tearing Down function to clear class variable
-# 	def tearDown(self):
-# 		Credential.login_credentials=[]
+#tearing Down function to clear class variable
+	def tearDown(self):
+		Account.accounts_list=[]
 
-# #saving multiple credentials 
-# 	def test_save_multiple_credentials(self):
+#saving multiple credentials 
+	def test_save_multiple_account(self):
 
-# 		self.new_credential.save_credential()
+		self.new_acc.save_account()
 
-# 		another_credential=Credential("James","Gitau","QWERTY","jamesgitau@gmail.com")
-# 		another_credential.save_credential()
+		another_account=Account("Twitter","toelapiut7@gmail.com","QWERTY")
+		another_account.save_account()
 
-# 		self.assertEqual(len(Credential.login_credentials),2)
+		self.assertEqual(len(Account.accounts_list),2)
 
 # #delete credential if someone doesn't need the account 
 # 	def test_delete_credential(self):
