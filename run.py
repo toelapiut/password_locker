@@ -50,13 +50,13 @@ def save_accounts(aname,emails,pword):
 
 #function to find a user account 
 def find_account(passwrd):
-	return Credential.find_account(passwrd)
+	return Credential.find_account(psword)
 
 #---------------------------------------------------------
 
 #function to check if the account exists 
-def account_exists(last_name):
-	return Credential.account_exist(last_name)
+def account_existx(passwrd):
+	return Credential.account_exist(passwrd)
 
 #---------------------------------------------------------
 
@@ -78,7 +78,7 @@ def find_existing_account(passwrd):
 #--------------------------------------------------------
 
 #function to find existing accounts
-def account_exists(emails):
+def account_existed(emails):
 	return Account.account_exists(emails)
 
 #---------------------------------------------------------
@@ -136,22 +136,35 @@ creating_account()
 
 def main():
 #confirmation of user credentials
-
+	# while True:
 	print("Hello,LogIn!")
 
 	
 	print("Enter Password")
 
+	# while True:
 
 	user_password=input().strip()
 	print("-"*22)
 
 
-	if account_exists(user_password)
+	if account_existx(user_password):
+		# while True:
+			print("Well, Use the following codes : ca - create a new Account, da - display contacts, fa -find a contact, ex -exit the contact list ")
+
+			print("Enter code")
+			usercode= input().strip().lower()
+
+			if usercode=='ca':
+				print("hello")
+			else:
+				print('fuck u')
+
 			
 
 
-
+	else:
+		print()
 
 
 
