@@ -216,12 +216,30 @@ def main():
 				if  account_existed(user_acc_name): 
 					search_account=find_existing_account(user_acc_name)
 					delete_accounts(search_account)
+#----------------------------------------------------------------------
+
+
+#find the contact and display it 	
+			elif usercode=="fa"
+			    user_acc_name=input()
+
+				if check_existing_contacts(user_acc_name):
+					search_accounts = find_contact(user_acc_name)
 				
+					print('-' * 20)
+
+					print(f"Account Name:{search_accounts.account_name}")
+					print(f"Email:{search_accounts.emails}")
+					print(f"Password:{search_accounts.passwords}")
+				else:
+					print("That contact does not exist")
+
+#Exiting from the program				
 			elif usercode=="ex":
 				print("Bye....Come Again!")
 				break
 			else:
-				print('fuck u')
+				print("Try the code Please or 'ex'")
 			
 
 
