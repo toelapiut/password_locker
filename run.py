@@ -18,8 +18,11 @@ def function():
 	
 function()
     #END OF HELLO ANIMATION 
- #=======================================================================================
+ #========================================================
 
+#=========================================================
+				#Credential functions 
+#=========================================================
 
 #function that take three arguments  from class Credential
 def creat_user_account(fname,lname,password):
@@ -48,3 +51,19 @@ def account exists(last_name):
 	return Credential.account_exist(last_name)
 
 #---------------------------------------------------------
+
+#=========================================================
+				#Account functions 
+#=========================================================
+
+#function to delete unwanted account
+def delete_accounts(account):
+	accounts.delete_account()
+
+
+#---------------------------------------------------------
+
+#function to find accounts
+def
+
+
