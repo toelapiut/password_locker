@@ -1,4 +1,6 @@
 #!/usr/bin/env python3.6
+from locker import Credential
+from locker import Account
 import random
 
 def function():
@@ -64,6 +66,35 @@ def delete_accounts(account):
 #---------------------------------------------------------
 
 #function to find accounts
-def
+def find_existing_account(passwrd):
+	return Account.find_accounts(passwrd)
+
+#--------------------------------------------------------
+
+#function to find existing accounts
+def account_exists(emails):
+	return Account.account_exists(emails)
+
+#---------------------------------------------------------
+
+def display_account():
+	return Account.display_accounts()
+
+
+#=========================================================
+					#End of functions
+#=========================================================
+
+#---------------------------------------------------------
+
+#=========================================================
+					#App creation
+#=========================================================
+
+
+
+
+
+
 
 
