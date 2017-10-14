@@ -1,5 +1,5 @@
 #!/usr/bin/env python3.6
-from locker import Credential
+from locker import Credential,Account
 from locker import Account
 import random
 
@@ -35,16 +35,9 @@ def creat_user_account(fname,lname,psword):
 #---------------------------------------------------------
 
 #function to save accounts
-def save_account(account):
-	account.save_credential()
+def save_accountsx(creden):
+	creden.save_credential()
 
-#---------------------------------------------------------
-
-#funtion for saving accounts
-def save_accounts(aname,emails,pword):
-	new_account=Account(aname,emails,pword)
-
-	new_account.save_account()
 
 #---------------------------------------------------------
 
@@ -64,10 +57,24 @@ def account_existx(passwrd):
 				#Account functions 
 #=========================================================
 
+from locker import Account
+
 #function to delete unwanted account
 def delete_accounts(account):
 	accounts.delete_account()
 
+#---------------------------------------------------------
+
+#funtion for create accounts
+def create_account1(aname,emails,pword):
+	new_account=Account(aname,emails,pword)
+	return new_account
+	
+#---------------------------------------------------------
+
+#function save account 
+def save_user_account(ac):
+	ac.save_account_user()
 
 #---------------------------------------------------------
 
@@ -133,7 +140,7 @@ def creating_account():
 	print("-"*22)
 
 
-	saved_user=save_account(creat_user_account(fname,lname,psword))
+	saved_user=save_accountsx(creat_user_account(fname,lname,psword))
 	print("\n")
 	print(f"Thank you!! {fname}-{lname} You've been added to our list ")
 
@@ -178,18 +185,18 @@ def main():
 
 				choice=input().strip().lower()
 
-				
+#generation of password
 				if choice=="n":
-					psword=random_password()
+					pword=random_password()
 					print(random_password())
+
 				elif choice=="y":
 					print("Enter Password")
 					print("-"*22)
-					psword=input()
-
+					pword=input()
+				save_user_account(create_account1(aname,emails,pword))
 			else:
 				print('fuck u')
-
 			
 
 

@@ -78,7 +78,7 @@ class Tested(unittest.TestCase):
 
 #testing if my credentials are being saved
 	def test_save_account(self):
-		self.new_acc.save_account()
+		self.new_acc.save_account_user()
 
 		self.assertEqual(len(Account.accounts_list),1)
 
@@ -89,20 +89,20 @@ class Tested(unittest.TestCase):
 #saving multiple credentials 
 	def test_save_multiple_account(self):
 
-		self.new_acc.save_account()
+		self.new_acc.save_account_user()
 
 		another_account=Account("Twitter","toelapiut7@gmail.com","QWERTY")
-		another_account.save_account()
+		another_account.save_account_user()
 
 		self.assertEqual(len(Account.accounts_list),2)
 
 #delete account if someone doesn't need the account 
 	def test_delete_account(self):
 
-		self.new_acc.save_account()
+		self.new_acc.save_account_user()
 
 		another_account=Account("Twitter","toelapiut7@gmail.com","QWERTY")
-		another_account.save_account()
+		another_account.save_account_user()
 
 		self.new_acc.delete_account()
 
@@ -110,10 +110,10 @@ class Tested(unittest.TestCase):
 
 #access the account by password
 	def test_find_account_by_password(self):
-		self.new_acc.save_account()
+		self.new_acc.save_account_user()
 
 		another_account=Account("Twitter","toelapiut7@gmail.com","QWERTY")
-		another_account.save_account()
+		another_account.save_account_user()
 
 		account_found=Account.find_accounts("QWERTY")
 
@@ -122,10 +122,10 @@ class Tested(unittest.TestCase):
 #account exists function
 	def test_account_exists(self):
 
-		self.new_acc.save_account()
+		self.new_acc.save_account_user()
 
 		another_account=Account("Twitter","toelapiut7@gmail.com","QWERTY")
-		another_account.save_account()
+		another_account.save_account_user()
 
 		exist_account=Account.account_exists("toelapiut7@gmail.com")
 

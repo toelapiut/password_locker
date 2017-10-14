@@ -4,6 +4,7 @@ main_list=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
 #class blue print
 
 global login_credentials
+global accounts_list
 
 
 class Credential:
@@ -80,7 +81,7 @@ class Account:
 #end of password generator	
 
 #-------------------------------------------------------
-	def save_account(self):
+	def save_account_user(self):
 
 		Account.accounts_list.append(self)
 #-------------------------------------------------------
