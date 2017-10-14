@@ -111,9 +111,9 @@ class Account:
 #-------------------------------------------------------
 #check for existance
 	@classmethod
-	def account_exists(cls,last_name):
+	def account_exists(cls,email):
 		for femail in cls.accounts_list:
-			if femail.last_name==last_name:
+			if femail.emails==email:
 				return True
 		return False
 #------------------------------------------------------

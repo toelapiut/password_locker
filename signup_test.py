@@ -127,7 +127,7 @@ class Tested(unittest.TestCase):
 		another_account=Account("Twitter","toelapiut7@gmail.com","QWERTY")
 		another_account.save_account()
 
-		exist_account=Account.account_exists("jamesgitau@gmail.com")
+		exist_account=Account.account_exists("toelapiut7@gmail.com")
 
 		self.assertTrue(exist_account)
 
