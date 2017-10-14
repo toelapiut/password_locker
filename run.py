@@ -113,15 +113,15 @@ def creating_account():
 	
 
 	print("Enter You first name!")
-	fname=input()
+	fname=input().lower().capitalize().strip()
 	print("-"*22)
 
 	print("Enter last name!")
-	lname=input()
+	lname=input().lower().capitalize().strip()
 	print("-"*22)
 
 	print("Key In your password")
-	psword=input()
+	psword=input().strip()
 	print("-"*22)
 
 
@@ -136,11 +136,19 @@ creating_account()
 
 def main():
 #confirmation of user credentials
+
 	print("Hello,LogIn!")
 
-	print("Confirm your account!")
-	user_email=input()
+	
+	print("Enter Password")
+
+
+	user_password=input().strip()
 	print("-"*22)
+
+
+	if account_exists(user_password)
+			
 
 
 

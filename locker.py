@@ -41,9 +41,9 @@ class Credential:
 
 
 	@classmethod
-	def account_exist(cls,last_name):
+	def account_exist(cls,passwrd):
 		for femail in cls.login_credentials:
-			if femail.last_name==last_name:
+			if femail.password==passwrd:
 				return True
 		return False
 

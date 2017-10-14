@@ -56,7 +56,7 @@ class Test(unittest.TestCase):
 		
 		another_credential.save_credential()
 
-		exist_account=Credential.account_exist("Gitau")
+		exist_account=Credential.account_exist("QWERTY")
 
 		self.assertTrue(exist_account)
 
