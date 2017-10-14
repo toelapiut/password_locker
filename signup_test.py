@@ -36,17 +36,6 @@ class Test(unittest.TestCase):
 
 		self.assertEqual(len(Credential.login_credentials),2)
 
-#delete credential if someone doesn't need the account 
-	def test_delete_credential(self):
-
-		self.new_credential.save_credential()
-
-		another_credential=Credential("James","Gitau","QWERTY")
-		another_credential.save_credential()
-
-		self.new_credential.delete_credential()
-
-		self.assertEqual(len(Credential.login_credentials),1)
 
 #access the account by password
 	def find_account_by_password(self):
@@ -71,21 +60,27 @@ class Test(unittest.TestCase):
 
 		self.assertTrue(exist_account)
 
+#====================================================================================
+from locker import Account
+class Tested(unittest.TestCase):
 
-# 		self.new_credential=Credential("apiut","toel","QwertY","toelapiut7@gmail.com")
+	def setUp(self):
 
-# #creation of an initializing test 
-# 	def test_init(self):
-# 		self.assertEqual(self.new_credential.first_name,"apiut")
-# 		self.assertEqual(self.new_credential.last_name,"toel")
-# 		self.assertEqual(self.new_credential.password,"QwertY")
-# 		self.assertEqual(self.new_credential.email,"toelapiut7@gmail.com")
+		self.new_acc=Account("FaceBook","toelapiut7@gmail.com","QwertY")
 
-# #testing if my credentials are being saved
-# 	def test_save_credential(self):
-# 		self.new_credential.save_credential()
+	#creation of an initializing test 
+	def test_init(self):
+		self.assertEqual(self.new_acc.account_name,"FaceBook")
+		self.assertEqual(self.new_acc.emails,"toelapiut7@gmail.com")
+		self.assertEqual(self.new_acc.passwords,"QwertY")
+		
 
-# 		self.assertEqual(len(Credential.login_credentials),1)
+
+#testing if my credentials are being saved
+	def test_save_account(self):
+		self.new_acc.save_account()
+
+		self.assertEqual(len(Account.accounts_list),1)
 
 # #tearing Down function to clear class variable
 # 	def tearDown(self):
