@@ -101,7 +101,7 @@ class Account:
 	@classmethod
 	def find_accounts(cls,passwrd):
 
-		for passed in cls.login_credentials:
+		for passed in cls.accounts_list:
 			if passed.passwords == passwrd:
 				return passed
 #-------------------------------------------------------
@@ -112,7 +112,7 @@ class Account:
 #check for existance
 	@classmethod
 	def account_exists(cls,last_name):
-		for femail in cls.login_credentials:
+		for femail in cls.accounts_list:
 			if femail.last_name==last_name:
 				return True
 		return False

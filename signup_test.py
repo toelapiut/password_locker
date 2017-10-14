@@ -96,7 +96,7 @@ class Tested(unittest.TestCase):
 
 		self.assertEqual(len(Account.accounts_list),2)
 
-#delete credential if someone doesn't need the account 
+#delete account if someone doesn't need the account 
 	def test_delete_account(self):
 
 		self.new_acc.save_account()
@@ -108,16 +108,16 @@ class Tested(unittest.TestCase):
 
 		self.assertEqual(len(Account.accounts_list),1)
 
-# #access the account by password
-# 	def find_account_by_password(self):
-# 		self.new_credential.save_credential()
+#access the account by password
+	def test_find_account_by_password(self):
+		self.new_acc.save_account()
 
-# 		another_credential=Credential("James","Gitau","QWERTY","jamesgitau@gmail.com")
-# 		another_credential.save_credential()
+		another_account=Account("Twitter","toelapiut7@gmail.com","QWERTY")
+		another_account.save_account()
 
-# 		account_found=Credential.find_account("QWERTY")
+		account_found=Account.find_accounts("QWERTY")
 
-# 		self.assertEqual(account_found.email,another_credential.email)
+		self.assertEqual(account_found.emails,another_account.emails)
 
 # #account exists function
 # 	def test_account_exists(self):
