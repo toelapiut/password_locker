@@ -119,17 +119,17 @@ class Tested(unittest.TestCase):
 
 		self.assertEqual(account_found.emails,another_account.emails)
 
-# #account exists function
-# 	def test_account_exists(self):
+#account exists function
+	def test_account_exists(self):
 
-# 		self.new_credential.save_credential()
-# 		another_credential=Credential("James","Gitau","QWERTY","jamesgitau@gmail.com")
-		
-# 		another_credential.save_credential()
+		self.new_acc.save_account()
 
-# 		exist_account=Credential.account_exist("jamesgitau@gmail.com")
+		another_account=Account("Twitter","toelapiut7@gmail.com","QWERTY")
+		another_account.save_account()
 
-# 		self.assertTrue(exist_account)
+		exist_account=Account.account_exists("jamesgitau@gmail.com")
+
+		self.assertTrue(exist_account)
 
 
 if __name__=="__main__":
