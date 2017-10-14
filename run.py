@@ -98,7 +98,9 @@ def display_account():
 #=========================================================
 
 print('\n')
+#--------------------------------------------------------
 
+#collection of user info
 global saved_user;
 
 def creating_account():
@@ -129,9 +131,18 @@ def creating_account():
 
 creating_account()
 
-def main():
+#--------------------------------------------------------
 
-	print("Key In your password")
+
+def main():
+#confirmation of user credentials
+	print("Hello,LogIn!")
+
+	print("Confirm your account!")
+	user_email=input()
+	print("-"*22)
+
+
 
 
 
