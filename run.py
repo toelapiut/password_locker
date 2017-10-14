@@ -27,15 +27,21 @@ function()
 #=========================================================
 
 #function that take three arguments  from class Credential
-def creat_user_account(fname,lname,password):
+def creat_user_account(fname,lname,psword):
 
-	new_user_account=Credential(fname,lname,password)
+	new_user_account=Credential(fname,lname,psword)
+	return new_user_account
 
-	new_user_account.save_credential()
+#---------------------------------------------------------
+
+#function to save accounts
+def save_account(account):
+	account.save_credential()
+
 #---------------------------------------------------------
 
 #funtion for saving accounts
-def creat_accounts(aname,emails,pword):
+def save_accounts(aname,emails,pword):
 	new_account=Account(aname,emails,pword)
 
 	new_account.save_account()
@@ -49,7 +55,7 @@ def find_account(passwrd):
 #---------------------------------------------------------
 
 #function to check if the account exists 
-def account exists(last_name):
+def account_exists(last_name):
 	return Credential.account_exist(last_name)
 
 #---------------------------------------------------------
@@ -91,10 +97,44 @@ def display_account():
 					#App creation
 #=========================================================
 
+print('\n')
+
+global saved_user;
+
+def creating_account():
+	print("Hey! Hello! It's nice to have you around! You're about to change your life.")
+
+	print("\n")
+
+	print("New User")
+	print("-"*22)
+	
+
+	print("Enter You first name!")
+	fname=input()
+	print("-"*22)
+
+	print("Enter last name!")
+	lname=input()
+	print("-"*22)
+
+	print("Key In your password")
+	psword=input()
+	print("-"*22)
+
+
+	saved_user=save_account(creat_user_account(fname,lname,psword))
+	print("\n")
+	print(f"Thank you!! {fname}-{lname} You've been added to our list ")
+
+creating_account()
+
+def main():
+
+	print("Key In your password")
 
 
 
 
-
-
-
+if __name__=='__main__':
+	main()
