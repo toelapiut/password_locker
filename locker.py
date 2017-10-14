@@ -100,10 +100,10 @@ class Account:
 #find account function
 
 	@classmethod
-	def find_accounts(cls,passwrd):
+	def find_accounts(cls,aname):
 
 		for passed in cls.accounts_list:
-			if passed.passwords == passwrd:
+			if passed.account_name == aname:
 				return passed
 #-------------------------------------------------------
 					#End

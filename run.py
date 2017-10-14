@@ -59,9 +59,6 @@ def account_existx(passwrd):
 
 from locker import Account
 
-#function to delete unwanted account
-def delete_accounts(account):
-	account.delete_account()
 
 #---------------------------------------------------------
 
@@ -81,6 +78,12 @@ def save_user_account(ac):
 #function to find accounts
 def find_existing_account(a_name):
 	return Account.find_accounts(a_name)
+
+#----------------------------------------------------------
+
+#function to delete unwanted account
+def delete_accounts(account):
+	account.delete_account()
 
 #--------------------------------------------------------
 
@@ -203,37 +206,29 @@ def main():
 
 					for accs in display_account():
 						print(f" Account Name:{accs.account_name} \n Email: {accs.emails} \n password: {accs.passwords} \n ======================")
-
+				else:
+					print("No search Account ..Try again.")
 #----------------------------------------------------------------------
 
 #deleting a specific contact
 			elif usercode=="del":
 				print("-"*10)
-				print("Enter Account Name")
+				print("Enter -Account Name- to delete")
 				user_acc_name=input()
 				print("\n")
 
 				if  account_existed(user_acc_name): 
 					search_account=find_existing_account(user_acc_name)
 					delete_accounts(search_account)
+
 #----------------------------------------------------------------------
 
 
 #find the contact and display it 	
-			elif usercode=="fa"
+			elif usercode=="fa":
 			    user_acc_name=input()
 
-				if check_existing_contacts(user_acc_name):
-					search_accounts = find_contact(user_acc_name)
-				
-					print('-' * 20)
-
-					print(f"Account Name:{search_accounts.account_name}")
-					print(f"Email:{search_accounts.emails}")
-					print(f"Password:{search_accounts.passwords}")
-				else:
-					print("That contact does not exist")
-
+		
 #Exiting from the program				
 			elif usercode=="ex":
 				print("Bye....Come Again!")

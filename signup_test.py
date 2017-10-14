@@ -115,9 +115,9 @@ class Tested(unittest.TestCase):
 		another_account=Account("Twitter","toelapiut7@gmail.com","QWERTY")
 		another_account.save_account_user()
 
-		account_found=Account.find_accounts("QWERTY")
+		account_found=Account.find_accounts("Twitter")
 
-		self.assertEqual(account_found.emails,another_account.emails)
+		self.assertEqual(account_found.account_name,another_account.account_name)
 
 #account exists function
 	def test_account_exists(self):
