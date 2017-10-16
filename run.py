@@ -254,8 +254,7 @@ def main():
 
 					else:
 						print("Please try again")
-						# elif shortcode=="exit":
-						# print("See ya'!!")	
+							
 		else:
 			print("Please create an account with")
 			
