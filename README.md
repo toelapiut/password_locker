@@ -8,7 +8,7 @@
 >This App helps us to get access to our account passwords We can Keep all our secret account passwords emails and types of accounts to aid out memory 
 
 
-##Known Bug
+#### Known Error
 >Non known
 
 #### Specs
@@ -20,9 +20,9 @@
 ##### Technologies
 
 >This app has been built using 
-##Python
+>Python
 
-####License
+#### License
 > Credit [Moringa School](http://moringaschool.com/)
 
 MIT ©2017[Apiut Toel]
