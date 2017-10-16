@@ -1,4 +1,4 @@
-## Github Search App
+## PassWord Locker
 >Author: Apiut Toel
 > 
 >Project Name: Password Locker
